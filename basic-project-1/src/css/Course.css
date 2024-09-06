@@ -1,0 +1,15 @@
+.course {
+  padding: 10px;
+}
+
+.course a {
+  background-color: green;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  font-style: italic;
+}
+
+.course hr {
+  margin-top: 40px;
+}
