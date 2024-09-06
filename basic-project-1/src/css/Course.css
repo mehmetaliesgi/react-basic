@@ -1,15 +1,43 @@
+.course-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .course {
+  width: 310px;
+  height: 500px;
+  border: 1px solid lightgray;
   padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
 }
 
-.course a {
-  background-color: green;
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-  font-style: italic;
+.course-title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-.course hr {
-  margin-top: 40px;
+.course-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.course-price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: red;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.course-link {
+  font-size: 15px;
+  text-align: right;
+}
+
+.course-link a {
+  text-decoration: none;
 }

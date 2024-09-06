@@ -5,15 +5,16 @@ function Course({ courseProps }) {
   const { id, title, description, price, link, image } = courseProps;
   return (
     <>
-      <div className="course">
-        <div>
-          <img src={image} alt="" width="300px" />
-          <h4>{title}</h4>
-          <h5>{description}</h5>
-          <h3>{price} ₺</h3>
-          <a href={link}>Buradan Ulaşın</a>
+      <div>
+        <div className="course">
+          <img src={image} alt="" />
+          <h4 className="course-title">{title}</h4>
+          <p className="course-desc">{description}</p>
+          <h3 className="course-price">{price} ₺</h3>
+          <div className="course-link">
+            <a href={link}>Buradan Ulaşın</a>
+          </div>
         </div>
-        <hr />
       </div>
     </>
   );
