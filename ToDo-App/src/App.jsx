@@ -15,11 +15,24 @@ function App() {
     setTodos(newTodos);
   };
 
+  const updateTodo = (propsTodo) => {
+    const returnUpdateTodo = todos.map((todo) => {
+      if (todo.id !== propsTodo.id) return todo;
+      return propsTodo;
+    });
+
+    setTodos(returnUpdateTodo);
+  };
+
   return (
     <div className="App">
       <div className="main">
         <TodoCreate onCreateTodo={createTodo} />
-        <TodoList todos={todos} onRemoveTodo={removeTodo} />
+        <TodoList
+          todos={todos}
+          onRemoveTodo={removeTodo}
+          onUpdateTodo={updateTodo}
+        />
       </div>
     </div>
   );
