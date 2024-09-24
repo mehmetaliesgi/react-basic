@@ -1,10 +1,12 @@
 import React from "react";
 import Todo from "./Todo";
 
-function TodoList() {
+function TodoList({ todos, onRemoveTodo }) {
   return (
     <div className="todo-list-div">
-      <Todo />
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} onRemoveTodo={onRemoveTodo} />
+      ))}
     </div>
   );
 }

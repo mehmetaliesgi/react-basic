@@ -10,11 +10,16 @@ function App() {
     setTodos([...todos, newTodo]);
   };
 
+  const removeTodo = (todoId) => {
+    let newTodos = todos.filter((c) => c.id !== todoId);
+    setTodos(newTodos);
+  };
+
   return (
     <div className="App">
       <div className="main">
         <TodoCreate onCreateTodo={createTodo} />
-        <TodoList />
+        <TodoList todos={todos} onRemoveTodo={removeTodo} />
       </div>
     </div>
   );

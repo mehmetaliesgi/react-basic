@@ -4,6 +4,10 @@ import "../App.css";
 function TodoCreate({ onCreateTodo }) {
   const [newTodo, setNewTodo] = useState("");
 
+  const clearTodoInput = () => {
+    setNewTodo("");
+  };
+
   const createTodo = () => {
     if (!newTodo) return;
 
@@ -11,8 +15,8 @@ function TodoCreate({ onCreateTodo }) {
       id: Math.floor(Math.random() * 99999999),
       content: newTodo,
     };
-
     onCreateTodo(request);
+    clearTodoInput();
   };
   return (
     <div className="todo-create">
