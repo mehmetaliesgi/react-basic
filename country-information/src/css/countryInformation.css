@@ -29,7 +29,7 @@ body {
 }
 
 .countryInput {
-  width: 400px;
+  width: 190px;
   padding: 10px;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -52,3 +52,29 @@ body {
   background-color: #1879ba;
 }
 
+.result img{
+  width: 300px;
+  margin-top: 10px;
+  height: 200px;
+  border: 1px solid #ced4da;
+}
+
+.result h2{
+  margin-top: 0;
+}
+
+.dataRow{
+  text-align: left;
+}
+
+.dataRow h4{
+  margin: 0;
+  font-size: 15px;
+}
+
+.dataRow span{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  max-width: 300px;
+}
