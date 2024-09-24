@@ -4,9 +4,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://v6.exchangerate-api.com/v6/",
+  baseURL: import.meta.env.VITE_BASE_URL,
 });
-const API_KEY = "1b257a9ec2182e48287aed60";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 function Currency() {
   const [amount, setAmount] = useState(0);
@@ -15,7 +15,7 @@ function Currency() {
   const [result, setResult] = useState(0);
 
   const exchange = async () => {
-    const response = await client.get(`${API_KEY}/latest/${fromCurrency}`);
+    const response = await client.get(`${apiKey}/latest/${fromCurrency}`);
 
     const resultValue = (
       response.data.conversion_rates[toCurrency] * Number(amount)
