@@ -1,42 +1,47 @@
-#root {
-  max-width: 1280px;
+.container {
+  background-color: rgb(10, 27, 184);
+  max-width: 600px;
+  padding: 10px 20px 20px;
+  border-radius: 12px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.container h1 {
+  margin: 0 auto;
   text-align: center;
+  padding: 10px 0 20px 0;
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+section div,
+section p {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+section div {
+  margin-top: 20px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section p {
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+section button {
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+section p {
+  padding-bottom: 20px;
 }
 
-.card {
-  padding: 2em;
+section > div.closed {
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
-}
+
