@@ -4,17 +4,11 @@ import TaskList from "./components/TaskList";
 
 function App() {
   return (
-    <div
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "lightgray",
-        width: "600px",
-        height: "100vh",
-      }}
-    >
-      <Task />
-      <TaskList />
+    <div className="flex flex-col justify-center items-center h-lvh">
+      <div className="w-1/2 h-1/2 items-center bg-purple-200 rounded-xl">
+        <Task />
+        <TaskList />
+      </div>
     </div>
   );
 }
